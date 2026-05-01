@@ -3,3 +3,6 @@
 .idea/
 *.log
 node_modules/
+
+# Source brand assets — local only, delivered versions live in /assets
+Logo/

@@ -1,12 +1,13 @@
 :root {
+    /* Brand colors from NEXEM logo */
     --bg: #ffffff;
-    --bg-alt: #f6f6f7;
-    --ink: #0a0a0a;
-    --ink-soft: #4a4a4f;
-    --muted: #8a8a92;
-    --line: #e6e6e9;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
+    --bg-alt: #f5f6fa;
+    --ink: #080526;          /* deep navy from logo */
+    --ink-soft: #4a4960;
+    --muted: #8b8aa0;
+    --line: #e4e4ec;
+    --accent: #0E61D1;       /* brand blue from logo */
+    --accent-hover: #0a4ea8;
     --radius: 14px;
     --max: 1120px;
     --space: clamp(1rem, 2vw, 1.5rem);
@@ -54,16 +55,13 @@ p { margin: 0; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem var(--space);
+    padding: 0.875rem var(--space);
     margin: 0 auto;
     max-width: var(--max);
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-}
+.logo { display: inline-flex; align-items: center; }
+.logo img { height: 36px; width: auto; display: block; }
 
 .site-header nav a {
     margin-left: 1.5rem;
@@ -72,21 +70,21 @@ p { margin: 0; }
     transition: color 0.15s;
 }
 
-.site-header nav a:hover { color: var(--ink); }
+.site-header nav a:hover { color: var(--accent); }
 
 /* Hero */
 .hero {
     padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 6rem);
     background:
-        radial-gradient(1200px 500px at 80% -10%, rgba(37, 99, 235, 0.08), transparent 60%),
-        radial-gradient(900px 400px at 0% 0%, rgba(37, 99, 235, 0.05), transparent 60%);
+        radial-gradient(1200px 500px at 80% -10%, rgba(14, 97, 209, 0.10), transparent 60%),
+        radial-gradient(900px 400px at 0% 0%, rgba(14, 97, 209, 0.06), transparent 60%);
 }
 
 .eyebrow {
     color: var(--accent);
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1.25rem;
 }
@@ -125,11 +123,11 @@ p { margin: 0; }
 }
 
 .btn-primary {
-    background: var(--ink);
+    background: var(--accent);
     color: #fff;
 }
 
-.btn-primary:hover { background: var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); }
 .btn-primary:active { transform: translateY(1px); }
 
 .btn-ghost {
@@ -150,7 +148,11 @@ section h2 {
 }
 
 /* Services grid */
-.services { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.services {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
 
 .grid {
     display: grid;
@@ -163,19 +165,20 @@ section h2 {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 2rem;
-    transition: border-color 0.15s, transform 0.15s;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 
 .card:hover {
-    border-color: var(--ink);
+    border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 12px 30px -18px rgba(8, 5, 38, 0.25);
 }
 
 .card-num {
     color: var(--accent);
     font-weight: 700;
     font-size: 0.85rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     margin-bottom: 0.75rem;
 }
 
@@ -195,7 +198,7 @@ section h2 {
 .contact-mail {
     display: inline-block;
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--ink);
     border-bottom: 2px solid transparent;
     padding-bottom: 0.25rem;
@@ -205,6 +208,12 @@ section h2 {
 .contact-mail:hover {
     color: var(--accent);
     border-bottom-color: var(--accent);
+}
+
+.contact-meta {
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
 /* Footer */
@@ -231,17 +240,18 @@ section h2 {
     transition: color 0.15s;
 }
 
-.site-footer nav a:hover { color: var(--ink); }
+.site-footer nav a:hover { color: var(--accent); }
 
 @media (max-width: 540px) {
     .footer-inner { flex-direction: column; align-items: flex-start; }
     .site-footer nav a { margin-left: 0; margin-right: 1rem; }
+    .logo img { height: 30px; }
 }
 
 /* Legal pages (Impressum / Datenschutz) */
 .legal { padding: clamp(3rem, 6vw, 5rem) 0; }
 .legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 2rem; }
-.legal h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+.legal h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; color: var(--ink); }
 .legal p, .legal ul { color: var(--ink-soft); margin-bottom: 1rem; max-width: 70ch; }
 .legal ul { padding-left: 1.25rem; }
 .legal a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
