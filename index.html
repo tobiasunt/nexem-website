@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexEM — Marketing, Dienstleistungen & E-Commerce Software</title>
+    <meta name="description" content="NexEM ist eine Agentur für Marketing, Dienstleistungen und Software-Entwicklung im Bereich E-Commerce. Wir bringen Online-Shops nach vorne.">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='system-ui' font-weight='800'%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">NexEM</a>
+            <nav>
+                <a href="#leistungen">Leistungen</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">Marketing &middot; Dienstleistungen &middot; Software</p>
+                <h1>Wir bringen E&#8209;Commerce&nbsp;nach&nbsp;vorne.</h1>
+                <p class="lead">
+                    Nexem verbindet strategisches Marketing mit technischer
+                    Umsetzung. Von der Kampagne bis zum Custom-Shop &mdash;
+                    aus einer Hand.
+                </p>
+                <div class="hero-cta">
+                    <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
+                    <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="leistungen" class="services">
+            <div class="container">
+                <h2>Was wir machen</h2>
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-num">01</div>
+                        <h3>Marketing</h3>
+                        <p>
+                            Performance-Kampagnen, SEO, Content und
+                            E-Mail-Automation &mdash; mit klarem Fokus auf
+                            ROI und messbares Wachstum.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <div class="card-num">02</div>
+                        <h3>Dienstleistungen</h3>
+                        <p>
+                            Beratung, Konzeption und laufende Betreuung
+                            für Marken und Online-Händler &mdash; pragmatisch
+                            und auf Augenh&ouml;he.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <div class="card-num">03</div>
+                        <h3>E-Commerce Software</h3>
+                        <p>
+                            Maßgeschneiderte Shop-Lösungen, Schnittstellen
+                            und Tools &mdash; entwickelt für Performance,
+                            Skalierung und einfache Wartung.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact">
+            <div class="container">
+                <h2>Lass uns reden.</h2>
+                <p class="lead">
+                    Konkretes Projekt, lose Idee oder einfach eine Frage?
+                    Schreib uns &mdash; wir melden uns zeitnah.
+                </p>
+                <a href="mailto:info@nexem.at" class="contact-mail">info@nexem.at</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> NexEM E-Commerce GmbH. Alle Rechte vorbehalten.</p>
+            <nav>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
